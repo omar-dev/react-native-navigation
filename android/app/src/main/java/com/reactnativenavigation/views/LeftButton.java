@@ -35,6 +35,7 @@ class LeftButton extends MaterialMenuDrawable implements View.OnClickListener {
         this.overrideBackPressInJs = overrideBackPressInJs;
         setInitialState();
         setColor();
+        setRTLEnabled(true);
     }
 
     void setIconState(TitleBarLeftButtonParams params) {

@@ -2,6 +2,7 @@ package com.reactnativenavigation.controllers;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.Window;
 
 import com.facebook.react.bridge.Callback;
@@ -38,6 +39,7 @@ class ModalController implements ScreenStackContainer, Modal.OnModalDismissedLis
 
     void showModal(ScreenParams screenParams) {
         Modal modal = new Modal(activity, this, screenParams);
+        modal.getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         modal.show();
         stack.add(modal);
     }
